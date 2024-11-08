@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--FONTE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../static/css/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Sweet Alert-->
+    <link rel="stylesheet" href="../static/swal/sweetalert.css" />
+    <script src="../static/swal/sweetalert.min.js"></script>
+
+    <!--Titulo-->
+    <link rel="icon" href="../static/imgs/ModeloAgil.ico" type="image/x-icon" />
+    <title>ModeloFácil</title>
+  </head>
+  <body>
+    <img id="fundo" src="../static/imgs/fundo5.png" />
+    <div class="container">
+      <div class="container-login">
+        <div class="side-left-div">
+          <div>
+            <h3>BEM VINDO !</h3>
+            <hr />
+            <h4 id="texto">
+              Crie sua conta e entre em contato com mais facilidade com os
+              fornecedores
+            </h4>
+            <button id="alternar" class="btn">CADASTRAR</button>
+          </div>
+        </div>
+
+        <div class="side-right-div" id="entrar">
+          <div>
+            <h3>LOGAR</h3>
+            <hr />
+            <label class="errorMessage" id="erroLogin"></label>
+            <div class="caixaBox">
+              <label>Digite seu email: </label>
+              <input
+                class="form-control input"
+                type="text"
+                id="email"
+                name="email"
+                value=""
+                placeholder="seunome@dominio.com..."
+              />
+            </div>
+            <div class="caixaBox"></div>
+            <label>Digite sua senha: </label>
+            <input
+              class="form-control input"
+              type="password"
+              id="senha"
+              name="senha"
+              value=""
+              placeholder="Digite sua senha"
+            />
+            <center>
+              <button
+                class="btn btn-primary btm"
+                id="btnLogin"
+                onclick="login()"
+              >
+                Entrar
+              </button>
+            </center>
+            <br /><br />
+          </div>
+        </div>
+
+        <div id="criarDiv" class="side-right-div">
+          <div>
+            <h3>CADASTRAR</h3>
+            <hr />
+            <p class="errorMessage" id="erroCadastro"></p>
+            <div id="barraProgresso"></div>
+            <div class="caixaBox" id="caixaNome">
+              <label>Digite seu nome: </label>
+              <input
+                class="form-control input"
+                type="text"
+                id="addNome"
+                name="nome"
+                value=""
+                placeholder="Digite seu nome"
+              />
+            </div>
+            <div class="caixaBox" id="caixaEmail">
+              <label>Digite seu email: </label>
+              <input
+                class="form-control input"
+                type="text"
+                id="addEmail"
+                name="email"
+                value=""
+                placeholder="seunome@dominio.com..."
+                title="Digite o seu e-mail que será utilizado para enviar as mensagens "
+              />
+            </div>
+            <div class="caixaBox" id="caixaSenha">
+              <label>Digite sua senha: </label>
+              <input
+                class="form-control input"
+                type="password"
+                id="addSenha"
+                name="senha"
+                value=""
+                placeholder="Digite sua senha de acesso ao e-mail "
+                title="A senha digitada aqui deve ser a mesma utilizada para acessar seu e-mail"
+              />
+            </div>
+            <div class="caixaBox" id="caixaSenha2">
+              <label>Confirme sua senha: </label>
+              <input
+                class="form-control input"
+                type="password"
+                id="addSenha2"
+                name="senha"
+                value=""
+                placeholder="Confirme sua senha"
+              />
+            </div>
+          </div>
+
+          <div class="btns">
+            <button id="proximo" class="btn btn-info btm">Próximo ➡</button>
+            <button
+              id="criar"
+              class="btn btn-success btm"
+              onclick="criarConta()"
+            >
+              Criar Conta
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/safe.js"></script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+body {
+  background-color: #0e0f24 !important;
+}
+
+#fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#fundo2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: scaleY(-1);
+}
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50% !important;
+  width: 60%;
+  background-color: #00002c36;
+  border-radius: 30px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 42, 156, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 2px #ffffff44;
+  overflow-y: auto;
+}
+body{
+  font-family: "Roboto", sans-serif;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.side-left-div {
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 50%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  text-align: center;
+  padding: 30px;
+  display: grid;
+  align-items: center;
+
+}
+#texto {
+  font-size: 20px;
+  color: #00002c;
+  width: 80%;
+  padding: 20px;
+
+  margin: auto;
+}
+#alternar {
+  background-color: #E5293F;
+  color: white;
+  font-weight: bold;
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#alternar:hover {
+  background-color: #df5666;
+}
+.side-left-div hr {
+  width: 80%;
+  margin: auto;
+  height: 2px;
+  z-index: 9999;
+  background-color: #00002caa;
+}
+.side-right-div {
+  position: relative;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, 0);
+
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  padding: 30px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 50%;
+  display: grid;
+  align-items: center;
+}
+.side-left-div h3 {
+  color: #00002c;
+}
+
+.side-right-div h3,
+label {
+  color: white;
+}
+
+.btm {
+  width: 45%;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.caixaBox {
+  margin-top: 20px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#barraProgresso {
+  width: 100%;
+  margin: 20px auto; /* Centraliza a barra de progresso */
+}
+
+.ui-progressbar {
+  height: 10px; /* Ajuste a altura da barra */
+}
+
+.ui-progressbar .ui-progressbar-value {
+  transition: background-color 0.5s; /* Suaviza a transição de cor */
+}
+
+.ui-progressbar .ui-progressbar-background {
+  background: #e0e0e0; /* Cor de fundo da barra de progresso */
+}
+.errorMessage {
+  color: rgb(255, 249, 159) !important;
+  font-weight: bold;
+}
+#btnLogin {
+  width: 100%;
+}
+
+
+
+@media (min-width: 993px) {
+  .container-login {
+    height: 50%;
+  }
+}
+
+@media (max-width: 776px) {
+  .container-login {
+    width: 90%;
+  }
+  button {
+    font-size: 16px;
+  }
+  label {
+    font-size: 14px;
+  }
+  #alternar {
+    font-size: 12px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .container-login {
+    width: 80%;
+  }
+}
+@media (min-width: 993px) {
+  .container-login {
+    width: 60%;
+  }
+}
